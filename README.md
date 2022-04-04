@@ -2,6 +2,10 @@
 
 [Mais uma edição de desenvolvimento de um jogo Web](https://boidacarapreta.github.io) para integrar as disciplinas de redes de computadores (ADC) e telefonia IP (IPT).
 
+# Progresso
+
+O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/adcipt20221/projects/1) e nos [milestones](//github.com/boidacarapreta/adcipt20221/milestones?direction=asc&sort=due_date&state=open).
+
 ## Equipes
 
 1. Ariane, Ayrton e Hilton
