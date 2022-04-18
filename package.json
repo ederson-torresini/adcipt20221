@@ -9,5 +9,20 @@
   "scripts": {
     "postinstall": "npm install",
     "start": "node servidor.js"
-  }
+  },
+  "name": "adcipt20221",
+  "description": "[Mais uma edição de desenvolvimento de um jogo Web](https://boidacarapreta.github.io) para integrar as disciplinas de redes de computadores (ADC) e telefonia IP (IPT).",
+  "version": "0.1.0",
+  "main": "servidor.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boidacarapreta/adcipt20221.git"
+  },
+  "author": "Ederson Torresini <boidacarapreta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boidacarapreta/adcipt20221/issues"
+  },
+  "homepage": "https://github.com/boidacarapreta/adcipt20221#readme"
 }
