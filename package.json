@@ -2,7 +2,11 @@
   "dependencies": {
     "express": "^4.17.3"
   },
+    "engines": {
+        "node": ">=16.x"
+    },
   "scripts": {
+    "postinstall": "npm install",
     "start": "node servidor.js"
   }
 }
