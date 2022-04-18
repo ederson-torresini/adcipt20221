@@ -10,7 +10,7 @@ O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/ad
 
 | Equipe                                                            | Jogo                                                     | Entrega 1 |
 | ----------------------------------------------------------------- | -------------------------------------------------------- | --------- |
-| [Ariane, Ayrton e Hilton](https://github.com/ifscgf)              | [Gravity Falls](https://github.com/ifscgf/Gravity-Falls) | 6         |
+| [Ariane, Ayrton, João Marcos e Hilton](https://github.com/ifscgf)              | [Gravity Falls](https://github.com/ifscgf/Gravity-Falls) | 6         |
 | [Monique, Luan, Julia e Sara](https://github.com/C-K-R-S)         | [Killer Run](https://github.com/C-K-R-S/Killer-Run)      | 6         |
 | [Caio, Alan e Pedro](https://github.com/El-Gato-Gordo)            | [Jogo](https://github.com/El-Gato-Gordo/Jogo)            | 8         |
 | [Matheus, Mateus, Lincoln e Vitor](https://github.com/whatsapp22) | [Fortfight](https://github.com/whatsapp22/Fortfight)     | 6         |
