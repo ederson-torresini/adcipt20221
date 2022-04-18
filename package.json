@@ -21,7 +21,6 @@
     "url": "git+https://github.com/boidacarapreta/adcipt20221.git"
   },
   "scripts": {
-    "postinstall": "npm install",
     "start": "node servidor.js"
   },
   "version": "0.1.0"
