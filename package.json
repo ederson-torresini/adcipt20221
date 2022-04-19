@@ -9,9 +9,6 @@
   },
   "description": "[Mais uma edição de desenvolvimento de um jogo Web](https://boidacarapreta.github.io) para integrar as disciplinas de redes de computadores (ADC) e telefonia IP (IPT).",
   "devDependencies": {},
-  "engines": {
-    "node": ">=16.x"
-  },
   "homepage": "https://github.com/boidacarapreta/adcipt20221#readme",
   "license": "MIT",
   "main": "servidor.js",
