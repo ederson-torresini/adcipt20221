@@ -20,7 +20,7 @@ O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/ad
 
 ## Referências
 
-Muitas URLS foram imrportadas do [repositório de 2020.2](https:////github.com/boidacarapreta/arc20202), em especial a [lista de vídeos com todo o (início do) desenvolvimento de um jogo Web feito com Phaser 3 e WebRTC](https://www.youtube.com/watch?v=fx4JN1QqtPc&list=PLje9mMro7hT0pDZWroVNyg-YbBGhJNsxU).
+Muitas referências foram importadas do [repositório de 2020.2](https:////github.com/boidacarapreta/arc20202), em especial a [lista de vídeos com todo o (início do) desenvolvimento de um jogo Web feito com Phaser 3 e WebRTC](https://www.youtube.com/watch?v=fx4JN1QqtPc&list=PLje9mMro7hT0pDZWroVNyg-YbBGhJNsxU).
 
 - Mapa e _assets_:
   - [OpenGameArt.org](https://opengameart.org/): _assets_ para sprites, músicas etc.
