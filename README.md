@@ -8,15 +8,15 @@ O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/ad
 
 ### Equipes
 
-| Equipe                                                                 | Jogo (a executar no Gitpod)                                                                | Entrega 1 |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------- |
-| [Ariane, Ayrton, João Marcos e Hilton](https://github.com/ifscgf)      | [Gravity Falls](https://gitpod.io/#https://github.com/ifscgf/Gravity-Falls)                | 6         |
-| [Monique, Luan, Julia e Sara](https://github.com/C-K-R-S)              | [Killer Run](https://gitpod.io/#https://github.com/C-K-R-S/Killer-Run)                     | 6         |
-| [Caio, Alan e Pedro](https://github.com/El-Gato-Gordo)                 | [Jogo](https://gitpod.io/#https://github.com/El-Gato-Gordo/Jogo)                           | 8         |
-| [Matheus, Mateus, Lincoln e Vitor](https://github.com/whatsapp22)      | [Fortfight](https://gitpod.io/#https://github.com/whatsapp22/Fortfight)                    | 6         |
-| [Emanuelly, Fernanda, Paula e Patrick](https://github.com/four-landia) | [Princesas perdidas](https://gitpod.io/#https://github.com/four-landia/Princesas-perdidas) | 8         |
-| [Igor e Gabriel J.](https://github.com/gabgilds)                       | [Telefone Sem Fio](https://gitpod.io/#https://github.com/gabgilds/Telefone-Sem-Fio)        | 6         |
-| [Emili](https://github.com/E-M-I-L-I)                                  | [Vento-](https://gitpod.io/#https://github.com/E-M-I-L-I/Vento-)                           | 8         |
+| Equipe                                                                 | Jogo (a executar no Gitpod)                                                                | Entrega 1 | Entrega 2 |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------- | --------- |
+| [Ariane, Ayrton, João Marcos e Hilton](https://github.com/ifscgf)      | [Gravity Falls](https://gitpod.io/#https://github.com/ifscgf/Gravity-Falls)                | 6         |           |
+| [Monique, Luan, Julia e Sara](https://github.com/C-K-R-S)              | [Killer Run](https://gitpod.io/#https://github.com/C-K-R-S/Killer-Run)                     | 6         |           |
+| [Caio, Alan e Pedro](https://github.com/El-Gato-Gordo)                 | [Mage Knight](https://gitpod.io/#https://github.com/El-Gato-Gordo/MageKnight)              |           |           |
+| [Matheus, Mateus, Lincoln e Vitor](https://github.com/whatsapp22)      | [Jogo principal](https://gitpod.io/#https://github.com/whatsapp22/Jogo-principal)          | 6         |           |
+| [Emanuelly, Fernanda, Paula e Patrick](https://github.com/four-landia) | [Princesas perdidas](https://gitpod.io/#https://github.com/four-landia/Princesas-perdidas) | 8         |           |
+| [Igor e Gabriel J.](https://github.com/gabgilds)                       | [Soccer Manager](https://gitpod.io/#https://github.com/gabgilds/Soccer-Manager)            | 6         |           |
+| [Emili](https://github.com/E-M-I-L-I)                                  | [Vento-](https://gitpod.io/#https://github.com/E-M-I-L-I/Vento-)                           | 8         |           |
 
 ## Referências
 
