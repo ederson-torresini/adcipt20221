@@ -1,0 +1,21 @@
+[submodule "ifscgf-Gravity-Falls"]
+	path = ifscgf-Gravity-Falls
+	url = https://github.com/ifscgf/Gravity-Falls
+[submodule "C-K-R-S-Killer-Run"]
+	path = C-K-R-S-Killer-Run
+	url = https://github.com/C-K-R-S/Killer-Run
+[submodule "El-Gato-Gordo-MageKnight"]
+	path = El-Gato-Gordo-MageKnight
+	url = https://github.com/El-Gato-Gordo/MageKnight
+[submodule "whatsapp22-Jogo-principal"]
+	path = whatsapp22-Jogo-principal
+	url = https://github.com/whatsapp22/Jogo-principal
+[submodule "four-landia-Princesas-perdidas"]
+	path = four-landia-Princesas-perdidas
+	url = https://github.com/four-landia/Princesas-perdidas
+[submodule "gabgilds-Soccer-Manager"]
+	path = gabgilds-Soccer-Manager
+	url = https://github.com/gabgilds/Soccer-Manager
+[submodule "E-M-I-L-I-Vento-"]
+	path = E-M-I-L-I-Vento-
+	url = https://github.com/E-M-I-L-I/Vento-
