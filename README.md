@@ -8,15 +8,15 @@ O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/ad
 
 ### Equipes
 
-| Equipe                                                                 | Jogo                                                                                                                                                            | Entrega 1 | Entrega 2 |
-| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------- |
-| [Ariane, Ayrton, João Marcos e Hilton](https://github.com/ifscgf)      | [Gravity Falls](https://github.com/ifscgf/Gravity-Falls) ([cópia](https://github.com/boidacarapreta/adcipt20221-ifscgf-Gravity-Falls))                          | 6         | 8         |
-| [Monique, Luan, Julia e Sara](https://github.com/C-K-R-S)              | [Killer Run](https://github.com/C-K-R-S/Killer-Run) ([cópia](https://github.com/boidacarapreta/adcipt20221-C-K-R-S-Killer-Run))                                 | 6         | 6         |
-| [Caio, Alan e Pedro](https://github.com/El-Gato-Gordo)                 | [Mage Knight](https://github.com/El-Gato-Gordo/MageKnight) ([cópia](https://github.com/boidacarapreta/adcipt20221-El-Gato-Gordo-MageKnight))                    | 8         | 6         |
-| [Matheus, Mateus, Lincoln e Vitor](https://github.com/whatsapp22)      | [Jogo principal](https://github.com/whatsapp22/Jogo-principal) ([cópia](https://github.com/boidacarapreta/adcipt20221-whatsapp22-Jogo-principal))               | 6         | 8         |
-| [Emanuelly, Fernanda, Paula e Patrick](https://github.com/four-landia) | [Princesas perdidas](https://github.com/four-landia/Princesas-perdidas) ([cópia](https://github.com/boidacarapreta/adcipt20221-four-landia-Princesas-perdidas)) | 8         | 6         |
-| [Igor e Gabriel J.](https://github.com/gabgilds)                       | [Soccer Manager](https://github.com/gabgilds/Soccer-Manager) ([cópia](https://github.com/boidacarapreta/adcipt20221-gabgilds-Soccer-Manager))                   | 6         | 6         |
-| [Emili](https://github.com/E-M-I-L-I)                                  | [Vento-](https://github.com/E-M-I-L-I/Vento-) ([cópia](https://github.com/boidacarapreta/adcipt20221-E-M-I-L-I-Vento-))                                         | 8         | 0         |
+| Equipe                                                                 | Jogo                                                                                                                                                            | Entrega 1 | Entrega 2 | Entrega 3 |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------- | --------- |
+| [Ariane, Ayrton, João Marcos e Hilton](https://github.com/ifscgf)      | [Gravity Falls](https://github.com/ifscgf/Gravity-Falls) ([cópia](https://github.com/boidacarapreta/adcipt20221-ifscgf-Gravity-Falls))                          | 6         | 8         | 8         |
+| [Monique, Luan, Julia e Sara](https://github.com/C-K-R-S)              | [Killer Run](https://github.com/C-K-R-S/Killer-Run) ([cópia](https://github.com/boidacarapreta/adcipt20221-C-K-R-S-Killer-Run))                                 | 6         | 6         | 6         |
+| [Caio, Alan e Pedro](https://github.com/El-Gato-Gordo)                 | [Mage Knight](https://github.com/El-Gato-Gordo/MageKnight) ([cópia](https://github.com/boidacarapreta/adcipt20221-El-Gato-Gordo-MageKnight))                    | 8         | 6         | 6         |
+| [Matheus, Mateus, Lincoln e Vitor](https://github.com/whatsapp22)      | [Jogo principal](https://github.com/whatsapp22/Jogo-principal) ([cópia](https://github.com/boidacarapreta/adcipt20221-whatsapp22-Jogo-principal))               | 6         | 8         | 6         |
+| [Emanuelly, Fernanda, Paula e Patrick](https://github.com/four-landia) | [Princesas perdidas](https://github.com/four-landia/Princesas-perdidas) ([cópia](https://github.com/boidacarapreta/adcipt20221-four-landia-Princesas-perdidas)) | 8         | 6         | 0         |
+| [Igor e Gabriel J.](https://github.com/gabgilds)                       | [Soccer Manager](https://github.com/gabgilds/Soccer-Manager) ([cópia](https://github.com/boidacarapreta/adcipt20221-gabgilds-Soccer-Manager))                   | 6         | 6         | 6         |
+| [Emili](https://github.com/E-M-I-L-I)                                  | [Vento-](https://github.com/E-M-I-L-I/Vento-) ([cópia](https://github.com/boidacarapreta/adcipt20221-E-M-I-L-I-Vento-))                                         | 8         | 0         | 0         |
 
 ## Referências
 
