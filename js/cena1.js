@@ -218,7 +218,7 @@ cena1.create = function () {
   );
 
   // Conectar no servidor via WebSocket
-  this.socket = io("https://servidor.ifsc.cloud");
+  this.socket = io("https://hidden-brook-30522.herokuapp.com/");
 
   // Disparar evento quando jogador entrar na partida
   var self = this;
