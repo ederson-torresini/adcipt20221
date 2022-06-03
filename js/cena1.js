@@ -22,6 +22,7 @@ var life = 0;
 var lifeText;
 var trilha;
 var jogador;
+var socket;
 var ice_servers = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
@@ -30,7 +31,7 @@ var remoteConnection;
 var midias;
 const audio = document.querySelector("audio");
 
-cena1.preload = () => {
+cena1.preload = function () {
   // Tilesets
   this.load.image("terreno", "./assets/terreno.png");
   this.load.image("ARCas", "./assets/ARCas.png");
@@ -64,7 +65,7 @@ cena1.preload = () => {
   });
 };
 
-cena1.create = () => {
+cena1.create = function () {
   // Trilha sonora
   trilha = this.sound.add("trilha");
   trilha.play();
@@ -218,16 +219,15 @@ cena1.create = () => {
   );
 
   // Conectar no servidor via WebSocket
-  this.socket = io("https://hidden-brook-30522.herokuapp.com/");
+  socket = io("https://hidden-brook-30522.herokuapp.com/");
 
   // Disparar evento quando jogador entrar na partida
   var self = this;
   var physics = this.physics;
   var cameras = this.cameras;
   var time = this.time;
-  var socket = this.socket;
 
-  this.socket.on("jogadores", (jogadores) => {
+  socket.on("jogadores", (jogadores) => {
     if (jogadores.primeiro === self.socket.id) {
       // Define jogador como o primeiro
       jogador = 1;
@@ -310,7 +310,7 @@ cena1.create = () => {
     }
   });
 
-  this.socket.on("offer", (socketId, description) => {
+  socket.on("offer", (socketId, description) => {
     remoteConnection = new RTCPeerConnection(ice_servers);
     midias
       .getTracks()
@@ -340,7 +340,7 @@ cena1.create = () => {
   });
 
   // Desenhar o outro jogador
-  this.socket.on("desenharOutroJogador", ({ frame, x, y }) => {
+  socket.on("desenharOutroJogador", ({ frame, x, y }) => {
     if (jogador === 1) {
       player2.setFrame(frame);
       player2.x = x;
@@ -352,7 +352,7 @@ cena1.create = () => {
     }
   });
 };
-cena1.update = () => {
+cena1.update = function () {
   // Controle do personagem por direcionais
   if (jogador === 1 && timer >= 0) {
     if (cursors.left.isDown) {
@@ -372,7 +372,7 @@ cena1.update = () => {
     } else {
       player1.body.setVelocityY(0);
     }
-    this.socket.emit("estadoDoJogador", {
+    socket.emit("estadoDoJogador", {
       frame: player1.anims.currentFrame.index,
       x: player1.body.x,
       y: player1.body.y,
@@ -395,7 +395,7 @@ cena1.update = () => {
     } else {
       player2.body.setVelocityY(0);
     }
-    this.socket.emit("estadoDoJogador", {
+    socket.emit("estadoDoJogador", {
       frame: player2.anims.currentFrame.index,
       x: player2.body.x,
       y: player2.body.y,

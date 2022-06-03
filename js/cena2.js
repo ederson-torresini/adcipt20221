@@ -4,12 +4,12 @@ import { cena1 } from "./cena1.js";
 // Criar a cena 2
 var cena2 = new Phaser.Scene("Cena 2");
 
-cena2.preload = () => {
+cena2.preload = function () {
   // Imagem de fundo
   this.load.image("flor", "./assets/cena2.png");
 };
 
-cena2.create = () => {
+cena2.create = function () {
   // Botão com a imagem de fundo
   var button = this.add.image(400, 300, "flor", 0).setInteractive();
 
@@ -23,7 +23,7 @@ cena2.create = () => {
   );
 };
 
-cena2.update = () => {};
+cena2.update = function () {};
 
 // Exportar a cena
 export { cena2 };
