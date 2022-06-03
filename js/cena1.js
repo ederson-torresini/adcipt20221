@@ -222,13 +222,12 @@ cena1.create = function () {
   socket = io("https://hidden-brook-30522.herokuapp.com/");
 
   // Disparar evento quando jogador entrar na partida
-  var self = this;
   var physics = this.physics;
   var cameras = this.cameras;
   var time = this.time;
 
   socket.on("jogadores", (jogadores) => {
-    if (jogadores.primeiro === self.socket.id) {
+    if (jogadores.primeiro === socket.id) {
       // Define jogador como o primeiro
       jogador = 1;
 
@@ -250,7 +249,7 @@ cena1.create = function () {
           midias = stream;
         })
         .catch((error) => console.log(error));
-    } else if (jogadores.segundo === self.socket.id) {
+    } else if (jogadores.segundo === socket.id) {
       // Define jogador como o segundo
       jogador = 2;
 
