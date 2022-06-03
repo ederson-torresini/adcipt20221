@@ -30,7 +30,7 @@ var remoteConnection;
 var midias;
 const audio = document.querySelector("audio");
 
-cena1.preload = function () {
+cena1.preload = () => {
   // Tilesets
   this.load.image("terreno", "./assets/terreno.png");
   this.load.image("ARCas", "./assets/ARCas.png");
@@ -64,7 +64,7 @@ cena1.preload = function () {
   });
 };
 
-cena1.create = function () {
+cena1.create = () => {
   // Trilha sonora
   trilha = this.sound.add("trilha");
   trilha.play();
@@ -189,7 +189,7 @@ cena1.create = function () {
   // Ao clicar no botão de tela cheia
   button.on(
     "pointerup",
-    function () {
+    () => {
       if (this.scale.isFullscreen) {
         button.setFrame(0);
         this.scale.stopFullscreen();
@@ -205,7 +205,7 @@ cena1.create = function () {
   var FKey = this.input.keyboard.addKey("F");
   FKey.on(
     "down",
-    function () {
+    () => {
       if (this.scale.isFullscreen) {
         button.setFrame(0);
         this.scale.stopFullscreen();
@@ -227,7 +227,7 @@ cena1.create = function () {
   var time = this.time;
   var socket = this.socket;
 
-  this.socket.on("jogadores", function (jogadores) {
+  this.socket.on("jogadores", (jogadores) => {
     if (jogadores.primeiro === self.socket.id) {
       // Define jogador como o primeiro
       jogador = 1;
@@ -352,7 +352,7 @@ cena1.create = function () {
     }
   });
 };
-cena1.update = function (time, delta) {
+cena1.update = () => {
   // Controle do personagem por direcionais
   if (jogador === 1 && timer >= 0) {
     if (cursors.left.isDown) {

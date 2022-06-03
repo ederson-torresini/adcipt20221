@@ -13,7 +13,7 @@ var jogadores = {
 };
 
 // Disparar evento quando jogador entrar na partida
-io.on("connection", function (socket) {
+io.on("connection", (socket) => {
   if (jogadores.primeiro === undefined) {
     jogadores.primeiro = socket.id;
   } else if (jogadores.segundo === undefined) {
@@ -38,7 +38,7 @@ io.on("connection", function (socket) {
   });
 
   // Disparar evento quando jogador sair da partida
-  socket.on("disconnect", function () {
+  socket.on("disconnect", () => {
     if (jogadores.primeiro === socket.id) {
       jogadores.primeiro = undefined;
     }
@@ -49,7 +49,7 @@ io.on("connection", function (socket) {
     console.log("-Lista de jogadores: %s", jogadores);
   });
 
-  socket.on("estadoDoJogador", function (estado) {
+  socket.on("estadoDoJogador", (estado) => {
     socket.broadcast.emit("desenharOutroJogador", estado);
   });
 });
