@@ -352,6 +352,7 @@ cena1.create = function () {
   });
 };
 cena1.update = function () {
+
   // Controle do personagem por direcionais
   if (jogador === 1 && timer >= 0) {
     if (cursors.left.isDown) {
@@ -372,7 +373,7 @@ cena1.update = function () {
       player1.body.setVelocityY(0);
     }
     socket.emit("estadoDoJogador", {
-      frame: player1.anims.currentFrame.index,
+      frame: player1.anims.getFrameName(),
       x: player1.body.x,
       y: player1.body.y,
     });
@@ -395,7 +396,7 @@ cena1.update = function () {
       player2.body.setVelocityY(0);
     }
     socket.emit("estadoDoJogador", {
-      frame: player2.anims.currentFrame.index,
+      frame: player2.anims.getFrameName(),
       x: player2.body.x,
       y: player2.body.y,
     });
