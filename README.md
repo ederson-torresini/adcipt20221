@@ -32,6 +32,7 @@ Muitas referências foram importadas do [repositório de 2020.2](https:////githu
   - [ZzXFM](https://keithclark.co.uk/articles/zzfxm/): mini gerador de música para Javascript.
   - [Buildbox](https://www.buildbox.com/13-places-to-find-free-game-sound-effects/): coletânea de sites com efeitos sonoros grátis.
 - Tutoriais:
+  - [GitHub Skills](https://skills.github.com/): série de tutoriais para dominar git e GitHub.
   - [GameDev Academy](https://gamedevacademy.org/): tutoriais para desenvolvimento de jogos Web, como por exemplo [jogos multijogador com Socket.IO](https://gamedevacademy.org/create-a-basic-multiplayer-game-in-phaser-3-with-socket-io-part-1/) e [MMORPGs](https://phasertutorials.com/how-to-create-a-phaser-3-mmorpg-part-1/).
   - [Emanuele Feronato](https://www.emanueleferonato.com/): dicas de desenvolvimento de jogos Web, como por exemplo [mapas procedurais](https://www.emanueleferonato.com/2019/01/29/javascript-procedural-dungeon-generator-found-on-github-fixed-a-bit-and-about-to-be-expanded/).
   - [Michael Hadley](https://medium.com/@michaelwesthadley): tutorial de como [criar mundos modulares usando _tilemaps_](https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6).
