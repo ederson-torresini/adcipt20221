@@ -24,8 +24,18 @@ var trilha;
 var jogador;
 var socket;
 var ice_servers = {
-  iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+  iceServers: [
+    {
+      urls: "stun:ifsc.cloud",
+    },
+    {
+      urls: "turns:ifsc.cloud",
+      username: "etorresini",
+      credential: "matrix",
+    },
+  ],
 };
+
 var localConnection;
 var remoteConnection;
 var midias;
@@ -221,6 +231,30 @@ cena1.create = function () {
   // Conectar no servidor via WebSocket
   socket = io("https://hidden-brook-30522.herokuapp.com/");
 
+  this.add.text(10, 10, "Sala para entrar:", {
+    font: "32px Courier",
+    fill: "#ffffff",
+  });
+
+  var textEntry = this.add.text(10, 50, "", {
+    font: "32px Courier",
+    fill: "#ffff00",
+  });
+
+  this.input.keyboard.on("keydown", function (event) {
+    if (event.keyCode === 8 && textEntry.text.length > 0) {
+      textEntry.text = textEntry.text.substr(0, textEntry.text.length - 1);
+    } else if (
+      event.keyCode === 32 ||
+      (event.keyCode >= 48 && event.keyCode < 90)
+    ) {
+      textEntry.text += event.key;
+    } else if (event.keyCode === 13) {
+      console.log(textEntry.text);
+      socket.emit("sala", textEntry.text);
+    }
+  });
+
   // Disparar evento quando jogador entrar na partida
   var physics = this.physics;
   var cameras = this.cameras;
@@ -351,8 +385,8 @@ cena1.create = function () {
     }
   });
 };
-cena1.update = function () {
 
+cena1.update = function () {
   // Controle do personagem por direcionais
   if (jogador === 1 && timer >= 0) {
     if (cursors.left.isDown) {

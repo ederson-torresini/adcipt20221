@@ -8,6 +8,9 @@
         "socket.io": "^4.5.1"
     },
     "description": "Servidor de jogo Web multijogador",
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    },
     "engines": {
         "node": ">=16.x"
     },
@@ -26,7 +29,8 @@
         "url": "git+https://github.com/boidacarapreta/adcipt20221.git"
     },
     "scripts": {
-        "start": "node servidor.js"
+        "start": "node servidor.js",
+        "dev": "nodemon servidor.js"
     },
     "version": "1.0.0"
 }
