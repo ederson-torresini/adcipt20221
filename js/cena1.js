@@ -40,6 +40,7 @@ var localConnection;
 var remoteConnection;
 var midias;
 const audio = document.querySelector("audio");
+var sala;
 
 cena1.preload = function () {
   // Tilesets
@@ -92,7 +93,7 @@ cena1.create = function () {
   tileset1 = map.addTilesetImage("ARCas", "ARCas");
 
   // Camada 1: terreno
-  terreno = map.createStaticLayer("terreno", tileset0, 0, 0);
+  terreno = map.createLayer("terreno", tileset0, 0, 0);
   terreno.setCollisionByProperty({ collides: true });
 
   // Personagens
@@ -166,7 +167,7 @@ cena1.create = function () {
   });
 
   // Camada 2: ARCas
-  ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
+  ARCas = map.createLayer("ARCas", tileset1, 0, 0);
   ARCas.setCollisionByProperty({ collides: true });
 
   // Direcionais do teclado
@@ -231,27 +232,33 @@ cena1.create = function () {
   // Conectar no servidor via WebSocket
   socket = io("https://hidden-brook-30522.herokuapp.com/");
 
-  this.add.text(10, 10, "Sala para entrar:", {
+  var mensagem = this.add.text(10, 10, "Sala para entrar:", {
     font: "32px Courier",
     fill: "#ffffff",
   });
 
-  var textEntry = this.add.text(10, 50, "", {
+  var mensagemEntrada = this.add.text(10, 50, "", {
     font: "32px Courier",
     fill: "#ffff00",
   });
 
   this.input.keyboard.on("keydown", function (event) {
-    if (event.keyCode === 8 && textEntry.text.length > 0) {
-      textEntry.text = textEntry.text.substr(0, textEntry.text.length - 1);
+    if (event.keyCode === 8 && mensagemEntrada.text.length > 0) {
+      mensagemEntrada.text = mensagemEntrada.text.substr(
+        0,
+        mensagemEntrada.text.length - 1
+      );
     } else if (
       event.keyCode === 32 ||
       (event.keyCode >= 48 && event.keyCode < 90)
     ) {
-      textEntry.text += event.key;
+      mensagemEntrada.text += event.key;
     } else if (event.keyCode === 13) {
-      console.log(textEntry.text);
-      socket.emit("sala", textEntry.text);
+      sala = mensagemEntrada.text;
+      console.log("Pedido de entrada na sala %s.", sala);
+      socket.emit("entrar-na-sala", sala);
+      mensagem.destroy();
+      mensagemEntrada.destroy();
     }
   });
 
@@ -308,8 +315,7 @@ cena1.create = function () {
             .getTracks()
             .forEach((track) => localConnection.addTrack(track, midias));
           localConnection.onicecandidate = ({ candidate }) => {
-            candidate &&
-              socket.emit("candidate", jogadores.primeiro, candidate);
+            candidate && socket.emit("candidate", sala, candidate);
           };
           console.log(midias);
           localConnection.ontrack = ({ streams: [midias] }) => {
@@ -319,11 +325,7 @@ cena1.create = function () {
             .createOffer()
             .then((offer) => localConnection.setLocalDescription(offer))
             .then(() => {
-              socket.emit(
-                "offer",
-                jogadores.primeiro,
-                localConnection.localDescription
-              );
+              socket.emit("offer", sala, localConnection.localDescription);
             });
         })
         .catch((error) => console.log(error));
@@ -406,10 +408,10 @@ cena1.update = function () {
     } else {
       player1.body.setVelocityY(0);
     }
-    socket.emit("estadoDoJogador", {
+    socket.emit("estadoDoJogador", sala, {
       frame: player1.anims.getFrameName(),
-      x: player1.body.x,
-      y: player1.body.y,
+      x: player1.body.x + 8,
+      y: player1.body.y + 8,
     });
   } else if (jogador === 2 && timer >= 0) {
     if (cursors.left.isDown) {
@@ -429,10 +431,10 @@ cena1.update = function () {
     } else {
       player2.body.setVelocityY(0);
     }
-    socket.emit("estadoDoJogador", {
+    socket.emit("estadoDoJogador", sala, {
       frame: player2.anims.getFrameName(),
-      x: player2.body.x,
-      y: player2.body.y,
+      x: player2.body.x + 8,
+      y: player2.body.y + 8,
     });
   }
 };
