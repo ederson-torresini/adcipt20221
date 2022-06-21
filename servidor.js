@@ -10,15 +10,16 @@ const PORT = process.env.PORT || 3000;
 
 // Disparar evento quando jogador entrar na partida
 io.on("connection", (socket) => {
+  // Aguardar pelo jogador enviar o nome da sala
   socket.on("entrar-na-sala", (sala) => {
     socket.join(sala);
     var jogadores = {};
-    if (io.sockets.adapter.rooms.get(sala).size === 1) {
+    if (io.sockets.adapter.rooms.get(sala).size === 1) { // 1 jogador
       jogadores = {
         primeiro: socket.id,
         segundo: undefined,
       };
-    } else if (io.sockets.adapter.rooms.get(sala).size === 2) {
+    } else if (io.sockets.adapter.rooms.get(sala).size === 2) { // 2 jogadores
       let [primeiro] = io.sockets.adapter.rooms.get(sala);
       jogadores = {
         primeiro: primeiro,
@@ -26,6 +27,7 @@ io.on("connection", (socket) => {
       };
     }
     console.log("Sala %s: %s", sala, jogadores);
+    // Envia a todos a lista atual de jogadores (mesmo incompleta)
     io.to(sala).emit("jogadores", jogadores);
   });
 
@@ -45,9 +47,9 @@ io.on("connection", (socket) => {
   });
 
   // Disparar evento quando jogador sair da partida
-  socket.on("disconnect", () => {
-  });
+  socket.on("disconnect", () => {});
 
+  // Envio do estado do outro jogador
   socket.on("estadoDoJogador", (sala, estado) => {
     socket.broadcast.to(sala).emit("desenharOutroJogador", estado);
   });
