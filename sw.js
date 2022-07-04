@@ -38,9 +38,21 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  console.log("Service worker activate event!");
   event.waitUntil(self.clients.claim());
 });
+
+// addEventListener("activate", (event) => {
+//   console.log("Service worker activate event!");
+//   event.waitUntil(
+//     (async function () {
+//       // Feature-detect
+//       if (self.registration.navigationPreload) {
+//         // Enable navigation preloads!
+//         await self.registration.navigationPreload.enable();
+//       }
+//     })()
+//   );
+// });
 
 self.addEventListener("fetch", (event) => {
   console.log("Fetch intercepted for: ", event.request.url);
