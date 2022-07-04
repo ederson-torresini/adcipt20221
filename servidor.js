@@ -3,7 +3,7 @@ const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server, {
   cors: {
-    origins: ["https://cliente.ifsc.cloud", "https://*.gitpod.io", "http://localhost:3000"],
+    origins: ["https://cliente.ifsc.cloud"],
   },
 });
 const PORT = process.env.PORT || 3000;
@@ -14,12 +14,14 @@ io.on("connection", (socket) => {
   socket.on("entrar-na-sala", (sala) => {
     socket.join(sala);
     var jogadores = {};
-    if (io.sockets.adapter.rooms.get(sala).size === 1) { // 1 jogador
+    if (io.sockets.adapter.rooms.get(sala).size === 1) {
+      // 1 jogador
       jogadores = {
         primeiro: socket.id,
         segundo: undefined,
       };
-    } else if (io.sockets.adapter.rooms.get(sala).size === 2) { // 2 jogadores
+    } else if (io.sockets.adapter.rooms.get(sala).size === 2) {
+      // 2 jogadores
       let [primeiro] = io.sockets.adapter.rooms.get(sala);
       jogadores = {
         primeiro: primeiro,
@@ -56,5 +58,4 @@ io.on("connection", (socket) => {
 });
 
 // Abrir porta para HTTPS/WSS
-app.use(express.static("./"));
 server.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
