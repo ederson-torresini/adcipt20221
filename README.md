@@ -1,6 +1,6 @@
 # ADC + IPT 2022.1
 
-[Mais uma edição de desenvolvimento de um jogo Web](https://boidacarapreta.github.io) para integrar as disciplinas de redes de computadores (ADC) e telefonia IP (IPT).
+[Mais uma edição de desenvolvimento de um jogo Web](https://boidacarapreta.github.io) para integrar as disciplinas de redes de computadores (ADC) e telefonia IP (IPT). O resultado está em: [https://cliente.ifsc.cloud](https://cliente.ifsc.cloud).
 
 ## Progresso
 
@@ -43,7 +43,7 @@ Muitas referências foram importadas do [repositório de 2020.2](https:////githu
 
 ## Hospedagem no GitHub Pages e Heroku
 
-O código do cliente, estático, está hospedado no [GitHub Pages](https://pages.github.com/). Já o código do servidor, de WebSocket, roda no Heroku. Esta decisão foi uma das tarefas deste projeto (#25).
+O código do cliente, estático, está hospedado no [GitHub Pages](https://cliente.ifsc.cloud/). Já o código do servidor, de WebSocket, roda no Heroku. Esta decisão foi uma das [tarefas deste projeto](https://github.com/boidacarapreta/adcipt20221/issues/25).
 
 ### Heroku: criação do serviço
 
