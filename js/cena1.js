@@ -94,6 +94,9 @@ cena1.preload = function () {
     frameWidth: 64,
     frameHeight: 64,
   });
+
+  // Escolha da sala
+  this.load.image("grade", "./assets/grade.png")
 };
 
 cena1.create = function () {
@@ -270,35 +273,35 @@ cena1.create = function () {
   // Conectar no servidor via WebSocket
   socket = io("https://hidden-brook-30522.herokuapp.com/");
 
+  // Escolha da sala antes de iniciar a partida
+  this.add.tileSprite(0, 0, 800, 600, "grade", 0);
+
   var mensagem = this.add.text(10, 10, "Sala para entrar:", {
     font: "32px Courier",
     fill: "#ffffff",
   });
 
-  var mensagemEntrada = this.add.text(10, 50, "", {
-    font: "32px Courier",
-    fill: "#ffff00",
-  });
-
-  this.input.keyboard.on("keydown", function (event) {
-    if (event.keyCode === 8 && mensagemEntrada.text.length > 0) {
-      mensagemEntrada.text = mensagemEntrada.text.substr(
-        0,
-        mensagemEntrada.text.length - 1
-      );
-    } else if (
-      event.keyCode === 32 ||
-      (event.keyCode >= 48 && event.keyCode < 90)
-    ) {
-      mensagemEntrada.text += event.key;
-    } else if (event.keyCode === 13) {
-      sala = mensagemEntrada.text;
-      console.log("Pedido de entrada na sala %s.", sala);
-      socket.emit("entrar-na-sala", sala);
-      mensagem.destroy();
-      mensagemEntrada.destroy();
-    }
-  });
+  /*
+    this.input.keyboard.on("keydown", function (event) {
+      if (event.keyCode === 8 && mensagemEntrada.text.length > 0) {
+        mensagemEntrada.text = mensagemEntrada.text.substr(
+          0,
+          mensagemEntrada.text.length - 1
+        );
+      } else if (
+        event.keyCode === 32 ||
+        (event.keyCode >= 48 && event.keyCode < 90)
+      ) {
+        mensagemEntrada.text += event.key;
+      } else if (event.keyCode === 13) {
+        sala = mensagemEntrada.text;
+        console.log("Pedido de entrada na sala %s.", sala);
+        socket.emit("entrar-na-sala", sala);
+        mensagem.destroy();
+        mensagemEntrada.destroy();
+      }
+    });
+  */
 
   // Disparar evento quando jogador entrar na partida
   var physics = this.physics;

@@ -10,6 +10,7 @@ const precacheResources = [
   "./assets/cima.png",
   "./assets/direita.png",
   "./assets/fullscreen.png",
+  "./assets/grade.png",
   "./assets/logo-128.png",
   "./assets/logo-192.png",
   "./assets/logo-256.png",
