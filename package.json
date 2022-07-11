@@ -1,33 +1,31 @@
 {
-    "author": "Ederson Torresini <boidacarapreta@gmail.com>",
-    "bugs": {
-        "url": "https://github.com/boidacarapreta/adcipt20221/issues"
-    },
-    "dependencies": {
-        "express": "^4.18.1",
-        "socket.io": "^4.5.1"
-    },
-    "description": "Servidor de jogo Web multijogador",
-    "engines": {
-        "node": ">=16.x"
-    },
-    "homepage": "https://github.com/boidacarapreta/adcipt20221#readme",
-    "keywords": [
-        "game",
-        "node",
-        "phaser",
-        "web"
-    ],
-    "license": "MIT",
-    "main": "servidor.js",
-    "name": "adcipt20221",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/boidacarapreta/adcipt20221.git"
-    },
-    "scripts": {
-        "start": "node servidor.js",
-        "dev": "nodemon servidor.js"
-    },
-    "version": "1.0.0"
+  "author": "Ederson Torresini <boidacarapreta@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/boidacarapreta/adcipt20221/issues"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "description": "Servidor de jogo Web multijogador",
+  "engines": {
+    "node": ">=16.x"
+  },
+  "homepage": "https://github.com/boidacarapreta/adcipt20221#readme",
+  "keywords": [
+    "game",
+    "node",
+    "phaser",
+    "web"
+  ],
+  "license": "MIT",
+  "main": "servidor.js",
+  "name": "adcipt20221",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boidacarapreta/adcipt20221.git"
+  },
+  "scripts": {
+    "start": "node servidor.js"
+  },
+  "version": "1.0.0"
 }
