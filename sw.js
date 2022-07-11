@@ -1,11 +1,14 @@
 const version = "0.1.0";
-const cacheName = "boidacarapreta-arc20202-phaser3";
+const cacheName = "cliente.ifsc.cloud";
 const precacheResources = [
   "./assets/ARCas.png",
+  "./assets/baixo.png",
   "./assets/cena0.png",
   "./assets/cena1.json",
   "./assets/cena1.mp3",
   "./assets/cena2.png",
+  "./assets/cima.png",
+  "./assets/direita.png",
   "./assets/fullscreen.png",
   "./assets/logo-128.png",
   "./assets/logo-192.png",
@@ -17,6 +20,7 @@ const precacheResources = [
   "./assets/player2.png",
   "./assets/terreno.png",
   "./assets/voz.mp3",
+  "./favicon.ico",
   "./index.html",
   "./js/cena0.js",
   "./js/cena1.js",
@@ -24,8 +28,7 @@ const precacheResources = [
   "./js/index.js",
   "./js/phaser.min.js",
   "./main.css",
-  "./manifest.json",
-  "./sw.js",
+  "./manifest.json"
 ];
 
 self.addEventListener("install", (event) => {
