@@ -25,6 +25,8 @@ var lifeText;
 var trilha;
 var jogador;
 var socket;
+var grade;
+var mensagem;
 var ice_servers = {
   iceServers: [
     {
@@ -96,7 +98,7 @@ cena1.preload = function () {
   });
 
   // Escolha da sala
-  this.load.image("grade", "./assets/grade.png")
+  this.load.image("grade", "./assets/grade.png");
 };
 
 cena1.create = function () {
@@ -274,34 +276,96 @@ cena1.create = function () {
   socket = io("https://hidden-brook-30522.herokuapp.com/");
 
   // Escolha da sala antes de iniciar a partida
-  this.add.tileSprite(0, 0, 800, 600, "grade", 0);
+  grade = this.add.tileSprite(400, 300, 600, 300, "grade", 0);
 
-  var mensagem = this.add.text(10, 10, "Sala para entrar:", {
+  mensagem = this.add.text(100, 150, "Escolha uma sala para entrar:", {
+    fontFamily: "monospace",
     font: "32px Courier",
     fill: "#ffffff",
   });
 
-  /*
-    this.input.keyboard.on("keydown", function (event) {
-      if (event.keyCode === 8 && mensagemEntrada.text.length > 0) {
-        mensagemEntrada.text = mensagemEntrada.text.substr(
-          0,
-          mensagemEntrada.text.length - 1
-        );
-      } else if (
-        event.keyCode === 32 ||
-        (event.keyCode >= 48 && event.keyCode < 90)
-      ) {
-        mensagemEntrada.text += event.key;
-      } else if (event.keyCode === 13) {
-        sala = mensagemEntrada.text;
-        console.log("Pedido de entrada na sala %s.", sala);
-        socket.emit("entrar-na-sala", sala);
-        mensagem.destroy();
-        mensagemEntrada.destroy();
-      }
+  var salas = [
+    {
+      numero: "0",
+      x: 150,
+      y: 200,
+      botao: undefined,
+    },
+    {
+      numero: "1",
+      x: 150,
+      y: 250,
+      botao: undefined,
+    },
+    {
+      numero: "2",
+      x: 150,
+      y: 300,
+      botao: undefined,
+    },
+    {
+      numero: "3",
+      x: 150,
+      y: 350,
+      botao: undefined,
+    },
+    {
+      numero: "4",
+      x: 150,
+      y: 400,
+      botao: undefined,
+    },
+    {
+      numero: "5",
+      x: 450,
+      y: 200,
+      botao: undefined,
+    },
+    {
+      numero: "6",
+      x: 450,
+      y: 250,
+      botao: undefined,
+    },
+    {
+      numero: "7",
+      x: 450,
+      y: 300,
+      botao: undefined,
+    },
+    {
+      numero: "8",
+      x: 450,
+      y: 350,
+      botao: undefined,
+    },
+    {
+      numero: "9",
+      x: 450,
+      y: 400,
+      botao: undefined,
+    },
+  ];
+
+  salas.forEach((item) => {
+    item.botao = this.add
+      .text(item.x, item.y, "[Sala " + item.numero + "]", {
+        fontFamily: "monospace",
+        font: "32px Courier",
+        fill: "#cccccc",
+      })
+      .setInteractive();
+
+    item.botao.on("pointerdown", () => {
+      mensagem.setText("Aguardando segundo jogador...");
+      salas.forEach((item) => {
+        item.botao.destroy();
+      });
+      sala = item.numero;
+      console.log("Pedido de entrada na sala %s.", sala);
+      socket.emit("entrar-na-sala", sala);
     });
-  */
+  });
 
   // Disparar evento quando jogador entrar na partida
   var physics = this.physics;
@@ -503,6 +567,8 @@ cena1.create = function () {
         callbackScope: this,
         loop: true,
       });
+      mensagem.destroy();
+      grade.destroy();
     }
   });
 
@@ -566,7 +632,6 @@ cena1.update = function () {
       x: player1.body.x + 8,
       y: player1.body.y + 8,
     });
-
   } else if (jogador === 2) {
     // Testa se há animação do oponente,
     // caso contrário envia o primeiro frame (0)
