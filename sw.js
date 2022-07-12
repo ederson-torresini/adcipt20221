@@ -1,4 +1,4 @@
-const version = "0.1.0";
+const version = "0.1.2";
 const cacheName = "cliente.ifsc.cloud";
 const precacheResources = [
   "./assets/ARCas.png",
@@ -29,7 +29,8 @@ const precacheResources = [
   "./js/index.js",
   "./js/phaser.min.js",
   "./main.css",
-  "./manifest.json"
+  "./manifest.json",
+  "./sw.js",
 ];
 
 self.addEventListener("install", (event) => {
