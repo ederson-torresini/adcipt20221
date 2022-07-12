@@ -1,8 +1,9 @@
 {
-  "name": "ARC/TIP 2020.2",
-  "short_name": "arc20202",
+  "name": "ADC/IPT 2022.1",
+  "short_name": "adcipt20221",
   "lang": "pt-BR",
-  "start_url": "index.html",
+  "id": "./index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#000000",
