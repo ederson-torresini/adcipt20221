@@ -276,73 +276,75 @@ cena1.create = function () {
   socket = io("https://hidden-brook-30522.herokuapp.com/");
 
   // Escolha da sala antes de iniciar a partida
-  grade = this.add.tileSprite(400, 300, 600, 300, "grade", 0);
+  grade = this.add.tileSprite(400, 225, 600, 300, "grade").setScrollFactor(0);
 
-  mensagem = this.add.text(100, 150, "Escolha uma sala para entrar:", {
-    fontFamily: "monospace",
-    font: "32px Courier",
-    fill: "#ffffff",
-  });
+  mensagem = this.add
+    .text(100, 75, "Escolha uma sala para entrar:", {
+      fontFamily: "monospace",
+      font: "32px Courier",
+      fill: "#cccccc",
+    })
+    .setScrollFactor(0);
 
   var salas = [
     {
       numero: "0",
       x: 150,
-      y: 200,
+      y: 125,
       botao: undefined,
     },
     {
       numero: "1",
       x: 150,
-      y: 250,
+      y: 175,
       botao: undefined,
     },
     {
       numero: "2",
       x: 150,
-      y: 300,
+      y: 225,
       botao: undefined,
     },
     {
       numero: "3",
       x: 150,
-      y: 350,
+      y: 275,
       botao: undefined,
     },
     {
       numero: "4",
       x: 150,
-      y: 400,
+      y: 325,
       botao: undefined,
     },
     {
       numero: "5",
       x: 450,
-      y: 200,
+      y: 125,
       botao: undefined,
     },
     {
       numero: "6",
       x: 450,
-      y: 250,
+      y: 175,
       botao: undefined,
     },
     {
       numero: "7",
       x: 450,
-      y: 300,
+      y: 225,
       botao: undefined,
     },
     {
       numero: "8",
       x: 450,
-      y: 350,
+      y: 275,
       botao: undefined,
     },
     {
       numero: "9",
       x: 450,
-      y: 400,
+      y: 325,
       botao: undefined,
     },
   ];
@@ -354,7 +356,8 @@ cena1.create = function () {
         font: "32px Courier",
         fill: "#cccccc",
       })
-      .setInteractive();
+      .setInteractive()
+      .setScrollFactor(0);
 
     item.botao.on("pointerdown", () => {
       mensagem.setText("Aguardando segundo jogador...");

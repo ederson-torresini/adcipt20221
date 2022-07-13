@@ -11,7 +11,7 @@ cena0.preload = function () {
 
 cena0.create = function () {
   // Botão com a imagem de fundo
-  var button = this.add.image(400, 300, "cadeado", 0).setInteractive();
+  var button = this.add.image(400, 225, "cadeado", 0).setInteractive();
 
   // Ao clicar no botão, inicia a cena 1
   button.on(

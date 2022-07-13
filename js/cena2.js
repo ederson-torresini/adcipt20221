@@ -11,7 +11,7 @@ cena2.preload = function () {
 
 cena2.create = function () {
   // Botão com a imagem de fundo
-  var button = this.add.image(400, 300, "flor", 0).setInteractive();
+  var button = this.add.image(400, 225, "flor", 0).setInteractive();
 
   // Ao clicar no botão, volta para a cena 1
   button.on(
