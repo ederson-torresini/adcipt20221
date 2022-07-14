@@ -22,25 +22,50 @@ const config = {
 const game = new Phaser.Game(config);
 
 function preload() {
-  this.load.image("adcipt20221", "./assets/adcipt20221.png");
+  this.load.image("fortfight", "./assets/fortfight.png");
+  this.load.image("gravity-falls-game", "./assets/gravity-falls-game.png");
+  this.load.image("killer-run", "./assets/killer-run.png");
+  this.load.image("princesas-perdidas", "./assets/princesas-perdidas.png");
+  this.load.image("soccer-simulator", "./assets/soccer-simulator.png");
 }
 
 function create() {
-  var adcipt20221 = this.add.image(200, 200, "adcipt20221", 0).setInteractive();
-  this.add.text(72, 328, "ADC/IPT 2022.1", {
-    fontFamily: "monospace",
-    fontSize: "32px",
-    fill: "#cccccc",
-  });
-
-  adcipt20221.on(
-    "pointerdown",
-    () => {
-      window.open("https://cliente.ifsc.cloud", '_blank');
+  var jogos = [
+    {
+      indice: "gravity-falls-game",
+      titulo: "Gravity Falls Game",
+      x: 200,
+      y: 200,
+      url: "http://gravityfallsgame.ifsc.cloud",
     },
-    this
-  );
+  ];
+
+  jogos.forEach((jogo) => {
+    jogo.imagem = this.add
+      .image(jogo.x, jogo.y, jogo.indice, 0)
+      .setInteractive();
+    jogo.texto = this.add
+      .text(jogo.x - 128, jogo.y + 128, jogo.titulo, {
+        fontFamily: "monospace",
+        font: "32px Courier",
+        fill: "#cccccc",
+      })
+      .setInteractive()
+      .setScrollFactor(0);
+
+    jogo.imagem.on("pointerdown", () => {
+      jogos.forEach((jogo) => {
+        jogo.imagem.setVisible(false);
+        jogo.texto.setVisible(false);
+      });
+    });
+    jogo.imagem.on("pointerout", () => {
+      jogos.forEach((jogo) => {
+        jogo.imagem.setVisible(true);
+        jogo.texto.setVisible(true);
+      });
+    });
+  });
 }
 
-function update() {
-}
+function update() {}
