@@ -256,19 +256,19 @@ cena1.create = function () {
 
   // D-pad
   var esquerda = this.add
-    .image(50, 550, "esquerda", 0)
+    .image(50, 400, "esquerda", 0)
     .setInteractive()
     .setScrollFactor(0);
   var direita = this.add
-    .image(125, 550, "direita", 0)
+    .image(125, 400, "direita", 0)
     .setInteractive()
     .setScrollFactor(0);
   var cima = this.add
-    .image(750, 475, "cima", 0)
+    .image(750, 325, "cima", 0)
     .setInteractive()
     .setScrollFactor(0);
   var baixo = this.add
-    .image(750, 550, "baixo", 0)
+    .image(750, 400, "baixo", 0)
     .setInteractive()
     .setScrollFactor(0);
 
