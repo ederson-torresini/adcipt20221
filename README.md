@@ -13,11 +13,10 @@ O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/ad
 | [Alan, Caio e Pedro](https://github.com/El-Gato-Gordo)                 | [Make Knight](https://github.com/El-Gato-Gordo/MageKnight) ([cópia](https://github.com/boidacarapreta/adcipt20221-El-Gato-Gordo-MageKnight))                    |                                                             | 6   | 6   | 6   | 6   | 0   | 0   |     |     |
 | [Ariane, Ayrton, João e Hilton](https://github.com/ifscgf)             | [Gravity Falls](https://github.com/ifscgf/Gravity-Falls) ([cópia](https://github.com/boidacarapreta/adcipt20221-ifscgf-Gravity-Falls))                          | [Gravity Falls Game](https://gravityfallsgame.ifsc.cloud/)  | 6   | 8   | 8   | 8   | 6   | 6   |     |     |
 | [Emanuelly, Fernanda, Patrick e Paula](https://github.com/four-landia) | [Princesas perdidas](https://github.com/four-landia/Princesas-perdidas) ([cópia](https://github.com/boidacarapreta/adcipt20221-four-landia-Princesas-perdidas)) | [Princesas Perdidas](https://princesasperdidas.ifsc.cloud/) | 8   | 6   | 6   | 6   | 6   | 0   |     |     |
-| [Emili](https://github.com/E-M-I-L-I)                                  | [Vento-](https://github.com/E-M-I-L-I/Vento-) ([cópia](https://github.com/boidacarapreta/adcipt20221-E-M-I-L-I-Vento-))                                         |                                                             | 8   | 0   | 0   | 0   | 0   | 0   |     |     |
+| [Emili](https://github.com/E-M-I-L-I)                                  | [Vento-](https://github.com/E-M-I-L-I/Vento-) ([cópia](https://github.com/boidacarapreta/adcipt20221-E-M-I-L-I-Vento-))                                         | [Vento-](https://vento.ifsc.cloud)                          | 8   | 0   | 0   | 0   | 0   | 0   |     |     |
 | [Gabriel e Igor](https://github.com/gabgilds)                          | [Soccer Simulator](https://github.com/gabgilds/Soccer-Simulator) ([cópia](https://github.com/boidacarapreta/adcipt20221-gabgilds-Soccer-Simulator))             | [Soccer Simulator](https://soccersimulator.ifsc.cloud/)     | 6   | 6   | 6   | 8   | 6   | 6   |     |     |
 | [Luan, Julia, Monique e Sara](https://github.com/C-K-R-S)              | [Killer Run](https://github.com/C-K-R-S/Killer-Run) ([cópia](https://github.com/boidacarapreta/adcipt20221-C-K-R-S-Killer-Run))                                 | [Killer Run](https://killerrun.ifsc.cloud/)                 | 6   | 6   | 6   | 6   | 6   | 6   |     |     |
-| [Matheus, Mateus, Lincoln e Vitor](https://github.com/whatsapp22)      | [Jogo principal](https://github.com/whatsapp22/Jogo-principal) ([cópia](https://github.com/boidacarapreta/adcipt20221-whatsapp22-Jogo-principal))               |                                                            | 6         | 8         | 6         | 0         |           |
-
+| [Matheus, Mateus, Lincoln e Vitor](https://github.com/whatsapp22)      | [Jogo principal](https://github.com/whatsapp22/Jogo-principal) ([cópia](https://github.com/boidacarapreta/adcipt20221-whatsapp22-Jogo-principal))               |                                                             | 6   | 8   | 6   | 0   |     |
 
 ## Referências
 
@@ -102,6 +101,8 @@ Para atualizar uma aplicação do Heroku, o processo é semelhante:
 
     ```sh
     heroku git:remote -a adcipt-20221
+
+    ```
 
   - Enviar o código:
 
