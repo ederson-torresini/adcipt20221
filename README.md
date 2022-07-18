@@ -4,7 +4,7 @@
 
 ## Progresso
 
-O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/adcipt20221/projects/1?fullscreen=true) e nos [milestones](//github.com/boidacarapreta/adcipt20221/milestones?direction=asc&sort=due_date&state=open).
+O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/adcipt20221/projects/1?fullscreen=true), [milestones](//github.com/boidacarapreta/adcipt20221/milestones?direction=asc&sort=due_date&state=open) e nas [versões (_releases_) publicadas](https://github.com/boidacarapreta/adcipt20221/releases).
 
 ### Equipes
 
