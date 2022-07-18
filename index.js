@@ -102,7 +102,7 @@ function preload() {
     this.load.image(jogo.qrcode.nome, jogo.qrcode.arquivo);
   });
   this.load.spritesheet("jogar", "./assets/jogar.png", {
-    frameWidth: 400,
+    frameWidth: 402,
     frameHeight: 65,
   });
   this.load.image("fechar", "./assets/fechar.png");
