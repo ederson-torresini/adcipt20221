@@ -1,7 +1,7 @@
 const config = {
   type: Phaser.AUTO,
-  width: 1080,
-  height: 1920,
+  width: 540,
+  height: 960,
   parent: "game-container",
   physics: {
     default: "arcade",
@@ -13,85 +13,170 @@ const config = {
     mode: Phaser.Scale.FIT,
     parent: "game-container",
     autoCenter: Phaser.Scale.CENTER_BOTH,
-    width: 1080,
-    height: 1920,
+    width: 540,
+    height: 960,
   },
   scene: { preload, create, update },
 };
 
 const game = new Phaser.Game(config);
+const jogos = [
+  {
+    indice: "gravity-falls-game",
+    url: "https://gravityfallsgame.ifsc.cloud",
+    logo: {
+      nome: "logo-gravity-falls-game",
+      arquivo: "./assets/logo/gravity-falls-game.png",
+      x: 135,
+      y: 250,
+    },
+    qrcode: {
+      nome: "qrcode-gravity-falls-game",
+      arquivo: "./assets/qrcode/gravity-falls-game.png",
+    },
+  },
+  {
+    indice: "killer-run",
+    url: "https://killerrun.ifsc.cloud",
+    logo: {
+      nome: "logo-killer-run",
+      arquivo: "./assets/logo/killer-run.png",
+      x: 405,
+      y: 250,
+    },
+    qrcode: {
+      nome: "qrcode-killer-run",
+      arquivo: "./assets/qrcode/killer-run.png",
+    },
+  },
+  {
+    indice: "princesa-perdidas",
+    url: "https://princesasperdidas.ifsc.cloud",
+    logo: {
+      nome: "logo-princesas-perdidas",
+      arquivo: "./assets/logo/princesas-perdidas.png",
+      x: 135,
+      y: 450,
+    },
+    qrcode: {
+      nome: "qrcode-princesas-perdidas",
+      arquivo: "./assets/qrcode/princesas-perdidas.png",
+    },
+  },
+  {
+    indice: "soccer-simulator",
+    url: "https://soccersimulator.ifsc.cloud",
+    logo: {
+      nome: "logo-soccer-simulator",
+      arquivo: "./assets/logo/soccer-simulator.png",
+      x: 405,
+      y: 450,
+    },
+    qrcode: {
+      nome: "qrcode-soccer-simulator",
+      arquivo: "./assets/qrcode/soccer-simulator.png",
+    },
+  },
+  {
+    indice: "vento",
+    url: "https://vento.ifsc.cloud",
+    logo: {
+      nome: "logo-vento",
+      arquivo: "./assets/logo/vento.png",
+      x: 405,
+      y: 750,
+    },
+    qrcode: {
+      nome: "qrcode-vento",
+      arquivo: "./assets/qrcode/vento.png",
+    },
+  },
+];
+var escolha;
+var fechar;
+var jogar;
 
 function preload() {
-  this.load.image("gravity-falls-game", "./assets/gravity-falls-game.png");
-  this.load.image("gravity-falls-game-qrcode", "./assets/gravity-falls-game-qrcode.png");
-  this.load.image("killer-run", "./assets/killer-run.png");
-  this.load.image("killer-run-qrcode", "./assets/killer-run-qrcode.png");
+  jogos.forEach((jogo) => {
+    this.load.image(jogo.logo.nome, jogo.logo.arquivo);
+    this.load.image(jogo.qrcode.nome, jogo.qrcode.arquivo);
+  });
+  this.load.spritesheet("jogar", "./assets/jogar.png", {
+    frameWidth: 400,
+    frameHeight: 65,
+  });
+  this.load.image("fechar", "./assets/fechar.png");
 }
 
 function create() {
-  var jogos = [
-    {
-      indice: "gravity-falls-game",
-      qrcode: "gravity-falls-game-qrcode",
-      titulo: "Gravity Falls Game",
-      x: 300,
-      y: 300,
-      url: "https://gravityfallsgame.ifsc.cloud",
-    },
-    {
-      indice: "killer-run",
-      qrcode: "killer-run-qrcode",
-      titulo: "Killer Run",
-      x: 800,
-      y: 300,
-      url: "https://killerrun.ifsc.cloud",
-    },
-  ];
-  var escolha = undefined
+  escolha = undefined;
+
+  this.anims.create({
+    key: "jogar-animado",
+    frames: this.anims.generateFrameNumbers("jogar", {
+      start: 0,
+      end: 6,
+    }),
+    frameRate: 10,
+    repeat: -1,
+  });
+
+  jogar = this.add
+    .sprite(config.width / 2, config.height / 2 + 300, "jogar", 0)
+    .setInteractive()
+    .setVisible(false);
+  jogar.anims.play("jogar-animado", true);
+
+  jogar.on("pointerdown", () => {
+    window.open(escolha, "_blank");
+  });
+
+  fechar = this.add
+    .image(config.width - 64, 64, "fechar")
+    .setInteractive()
+    .setVisible(false);
+
+  fechar.on("pointerdown", () => {
+    escolha = undefined;
+
+    jogos.forEach((jogo) => {
+      jogo.logo.objeto.setVisible(true);
+      jogo.qrcode.objeto.setVisible(false);
+      jogo.logo.objeto.x = jogo.logo.x;
+      jogo.logo.objeto.y = jogo.logo.y;
+    });
+
+    fechar.setVisible(false);
+    jogar.setVisible(false);
+  });
 
   jogos.forEach((jogo) => {
-    jogo.imagem = this.add
-      .image(jogo.x, jogo.y, jogo.indice)
+    jogo.logo.objeto = this.add
+      .image(jogo.logo.x, jogo.logo.y, jogo.logo.nome)
       .setInteractive();
 
-    jogo.imagem_qrcode = this.add
-      .image(540, 1100, jogo.qrcode)
+    jogo.qrcode.objeto = this.add
+      .image(config.width / 2, config.height / 2 + 25, jogo.qrcode.nome)
       .setVisible(false);
 
-    jogo.texto = this.add
-      .text(jogo.x - 128, jogo.y + 128, jogo.titulo, {
-        fontFamily: "monospace",
-        font: "32px Courier",
-        fill: "#cccccc",
-      })
-      .setInteractive()
-      .setScrollFactor(0);
+    jogo.logo.objeto.on("pointerdown", () => {
+      if (!escolha) {
+        escolha = jogo.url;
+        fechar.setVisible(true);
+        jogar.setVisible(true);
 
-    jogo.imagem.on("pointerdown", () => {
-      if (escolha) {
         jogos.forEach((jogo) => {
-          jogo.imagem.setVisible(true);
-          jogo.imagem_qrcode.setVisible(false)
-          jogo.texto.setVisible(true);
+          jogo.logo.objeto.setVisible(false);
+          jogo.qrcode.objeto.setVisible(false);
         });
-        escolha = undefined
-        jogo.imagem.x = jogo.x
-        jogo.imagem.y = jogo.y
-        window.open(jogo.url, "_blank")
-      } else {
-        jogos.forEach((jogo) => {
-          jogo.imagem.setVisible(false);
-          jogo.imagem_qrcode.setVisible(false)
-          jogo.texto.setVisible(false);
-        });
-        escolha = jogo.indice
-        jogo.imagem.setVisible(true)
-        jogo.imagem.x = 540
-        jogo.imagem.y = 800
-        jogo.imagem_qrcode.setVisible(true)
+
+        jogo.logo.objeto.setVisible(true);
+        jogo.logo.objeto.x = config.width / 2;
+        jogo.logo.objeto.y = config.height / 2 - 256;
+        jogo.qrcode.objeto.setVisible(true);
       }
     });
   });
 }
 
-function update() { }
+function update() {}
