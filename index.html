@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Feira de Jogos</title>
-    <link rel="preload" href="./main.css" as="style" />
-    <link rel="preload" href="./phaser.min.js" as="script" />
-    
     <meta charset="UTF-8" />
+    <title>Feira de Jogos</title>
+
     <meta name="author" content="Ederson Torresini" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -16,12 +14,17 @@
     <meta name="msapplication-navbutton-color" content="#000000" />
     <meta name="msapplication-starturl" content="./index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preload" href="./main.css" as="style" />
+    <link rel="preload" href="./phaser.min.js" as="script" />
+    <link rel="preload" href="./index.js" as="script" />
+
     <link rel="stylesheet" type="text/css" href="./main.css" />
   </head>
 
   <body>
     <div class="center" id="game-container"></div>
     <script type="text/javascript" src="./phaser.min.js" defer></script>
-    <script type="module" src="./index.js"></script>
+    <script type="text/javascript" src="./index.js" defer></script>
   </body>
 </html>
