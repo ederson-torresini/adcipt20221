@@ -23,7 +23,7 @@ const game = new Phaser.Game(config);
 const jogos = [
   {
     indice: "gravity-falls-game",
-    url: "https://gravityfallsgame.ifsc.cloud",
+    url: "https://gravityfallsgame.ifsc.cloud/",
     logo: {
       nome: "logo-gravity-falls-game",
       arquivo: "./assets/logo/gravity-falls-game.png",
@@ -37,7 +37,7 @@ const jogos = [
   },
   {
     indice: "killer-run",
-    url: "https://killerrun.ifsc.cloud",
+    url: "https://killerrun.ifsc.cloud/",
     logo: {
       nome: "logo-killer-run",
       arquivo: "./assets/logo/killer-run.png",
@@ -51,7 +51,7 @@ const jogos = [
   },
   {
     indice: "princesa-perdidas",
-    url: "https://princesasperdidas.ifsc.cloud",
+    url: "https://princesasperdidas.ifsc.cloud/",
     logo: {
       nome: "logo-princesas-perdidas",
       arquivo: "./assets/logo/princesas-perdidas.png",
@@ -65,7 +65,7 @@ const jogos = [
   },
   {
     indice: "soccer-simulator",
-    url: "https://soccersimulator.ifsc.cloud",
+    url: "https://soccersimulator.ifsc.cloud/",
     logo: {
       nome: "logo-soccer-simulator",
       arquivo: "./assets/logo/soccer-simulator.png",
@@ -75,6 +75,20 @@ const jogos = [
     qrcode: {
       nome: "qrcode-soccer-simulator",
       arquivo: "./assets/qrcode/soccer-simulator.png",
+    },
+  },
+  {
+    indice: "mage-knight",
+    url: "https://mageknight.ifsc.cloud/",
+    logo: {
+      nome: "logo-mage-knight",
+      arquivo: "./assets/logo/mage-knight.png",
+      x: 135,
+      y: 750,
+    },
+    qrcode: {
+      nome: "qrcode-mage-knight",
+      arquivo: "./assets/qrcode/mage-knight.png",
     },
   },
   {
