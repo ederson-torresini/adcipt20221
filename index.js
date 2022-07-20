@@ -77,34 +77,20 @@ const jogos = [
       arquivo: "./assets/qrcode/soccer-simulator.png",
     },
   },
-  {
-    indice: "mage-knight",
-    url: "https://mageknight.ifsc.cloud/",
-    logo: {
-      nome: "logo-mage-knight",
-      arquivo: "./assets/logo/mage-knight.png",
-      x: 135,
-      y: 750,
-    },
-    qrcode: {
-      nome: "qrcode-mage-knight",
-      arquivo: "./assets/qrcode/mage-knight.png",
-    },
-  },
-  {
-    indice: "vento",
-    url: "https://vento.ifsc.cloud",
-    logo: {
-      nome: "logo-vento",
-      arquivo: "./assets/logo/vento.png",
-      x: 405,
-      y: 750,
-    },
-    qrcode: {
-      nome: "qrcode-vento",
-      arquivo: "./assets/qrcode/vento.png",
-    },
-  },
+  // {
+  //   indice: "mage-knight",
+  //   url: "https://mageknight.ifsc.cloud/",
+  //   logo: {
+  //     nome: "logo-mage-knight",
+  //     arquivo: "./assets/logo/mage-knight.png",
+  //     x: 135,
+  //     y: 750,
+  //   },
+  //   qrcode: {
+  //     nome: "qrcode-mage-knight",
+  //     arquivo: "./assets/qrcode/mage-knight.png",
+  //   },
+  // }
 ];
 var escolha;
 var fechar;
