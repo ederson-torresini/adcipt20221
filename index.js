@@ -77,20 +77,20 @@ const jogos = [
       arquivo: "./assets/qrcode/soccer-simulator.png",
     },
   },
-  // {
-  //   indice: "mage-knight",
-  //   url: "https://mageknight.ifsc.cloud/",
-  //   logo: {
-  //     nome: "logo-mage-knight",
-  //     arquivo: "./assets/logo/mage-knight.png",
-  //     x: 135,
-  //     y: 750,
-  //   },
-  //   qrcode: {
-  //     nome: "qrcode-mage-knight",
-  //     arquivo: "./assets/qrcode/mage-knight.png",
-  //   },
-  // }
+  {
+    indice: "mage-knight",
+    url: "https://mageknight.ifsc.cloud/",
+    logo: {
+      nome: "logo-mage-knight",
+      arquivo: "./assets/logo/mage-knight.png",
+      x: 135,
+      y: 750,
+    },
+    qrcode: {
+      nome: "qrcode-mage-knight",
+      arquivo: "./assets/qrcode/mage-knight.png",
+    },
+  }
 ];
 var escolha;
 var fechar;
@@ -179,4 +179,4 @@ function create() {
   });
 }
 
-function update() {}
+function update() { }
