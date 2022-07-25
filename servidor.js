@@ -58,5 +58,4 @@ io.on("connection", (socket) => {
 });
 
 // Abrir porta para HTTPS/WSS
-// app.use(express.static("./"));
 server.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
