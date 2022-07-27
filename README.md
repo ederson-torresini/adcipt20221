@@ -1,22 +1,7 @@
 # ADC + IPT 2022.1
 
-[Mais uma edição de desenvolvimento de um jogo Web](https://boidacarapreta.github.io) para integrar as disciplinas de redes de computadores (ADC) e telefonia IP (IPT). O resultado está em: [https://cliente.ifsc.cloud](https://cliente.ifsc.cloud).
-
-## Progresso
-
-O progresso do projeto é visualizado no [kanban](//github.com/boidacarapreta/adcipt20221/projects/1?fullscreen=true), [milestones](//github.com/boidacarapreta/adcipt20221/milestones?direction=asc&sort=due_date&state=open) e nas [versões (_releases_) publicadas](https://github.com/boidacarapreta/adcipt20221/releases).
-
-### Equipes
-
-| Equipe                                                                 | Código                                                                                                                                                          | Jogo                                                        | E1  | E2  | E3  | E4  | E5  | E6  | E7  | E8  |
-| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [Alan, Caio e Pedro](https://github.com/El-Gato-Gordo)                 | [Mage Knight](https://github.com/El-Gato-Gordo/MageKnight) ([cópia](https://github.com/boidacarapreta/adcipt20221-El-Gato-Gordo-MageKnight))                    | [Mage Knight](https://mageknight.ifsc.cloud)                | 6   | 6   | 6   | 6   | 0   | 0   | 0   | 0   |
-| [Ariane, Ayrton, João e Hilton](https://github.com/ifscgf)             | [Gravity Falls](https://github.com/ifscgf/Gravity-Falls) ([cópia](https://github.com/boidacarapreta/adcipt20221-ifscgf-Gravity-Falls))                          | [Gravity Falls Game](https://gravityfallsgame.ifsc.cloud/)  | 6   | 8   | 8   | 8   | 6   | 6   | 6   | 6   |
-| [Emanuelly, Fernanda, Patrick e Paula](https://github.com/four-landia) | [Princesas perdidas](https://github.com/four-landia/Princesas-perdidas) ([cópia](https://github.com/boidacarapreta/adcipt20221-four-landia-Princesas-perdidas)) | [Princesas Perdidas](https://princesasperdidas.ifsc.cloud/) | 8   | 6   | 6   | 6   | 6   | 0   | 0   | 0   |
-| [Emili](https://github.com/E-M-I-L-I)                                  | [Vento-](https://github.com/E-M-I-L-I/Vento-) ([cópia](https://github.com/boidacarapreta/adcipt20221-E-M-I-L-I-Vento-))                                         | [Vento-](https://vento.ifsc.cloud)                          | 8   | 0   | 0   | 0   | 0   | 0   | 0   | 0   |
-| [Gabriel e Igor](https://github.com/gabgilds)                          | [Soccer Simulator](https://github.com/gabgilds/Soccer-Simulator) ([cópia](https://github.com/boidacarapreta/adcipt20221-gabgilds-Soccer-Simulator))             | [Soccer Simulator](https://soccersimulator.ifsc.cloud/)     | 6   | 6   | 6   | 8   | 6   | 6   | 6   | 0   |
-| [Luan, Julia, Monique e Sara](https://github.com/C-K-R-S)              | [Killer Run](https://github.com/C-K-R-S/Killer-Run) ([cópia](https://github.com/boidacarapreta/adcipt20221-C-K-R-S-Killer-Run))                                 | [Killer Run](https://killerrun.ifsc.cloud/)                 | 6   | 6   | 6   | 6   | 6   | 6   | 0   | 0   |
-| [Matheus, Mateus, Lincoln e Vitor](https://github.com/whatsapp22)      | [Jogo principal](https://github.com/whatsapp22/Jogo-principal) ([cópia](https://github.com/boidacarapreta/adcipt20221-whatsapp22-Jogo-principal))               | [FortFight](https://fortfight.ifsc.cloud)                   | 6   | 8   | 6   | 0   | 0   | 0   | 0   | 0   |
+[Mais uma edição de desenvolvimento de um jogo Web](https://boidacarapreta.github.io) para integrar as disciplinas de redes de computadores (ADC) e telefonia IP (IPT). Para documentar progresso do projeto, há o [kanban](//github.com/boidacarapreta/adcipt20221/projects/1?fullscreen=true), [milestones](//github.com/boidacarapreta/adcipt20221/milestones?direction=asc&sort=due_date&state=open) e as [versões (_releases_) publicadas](https://github.com/boidacarapreta/adcipt20221/releases).
+ O resultado está em: [https://cliente.ifsc.cloud](https://cliente.ifsc.cloud).
 
 ## Referências
 
