@@ -273,7 +273,7 @@ cena1.create = function () {
     .setScrollFactor(0);
 
   // Conectar no servidor via WebSocket
-  socket = io("https://hidden-brook-30522.herokuapp.com/");
+  socket = io();
 
   // Escolha da sala antes de iniciar a partida
   grade = this.add.tileSprite(400, 225, 600, 300, "grade").setScrollFactor(0);
