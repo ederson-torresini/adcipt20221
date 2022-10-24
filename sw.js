@@ -1,5 +1,5 @@
-const version = "1.0.0";
-const cacheName = "cliente.ifsc.cloud";
+const version = "1.1.0";
+const cacheName = "boidacarapreta.github.io";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(cacheName));
