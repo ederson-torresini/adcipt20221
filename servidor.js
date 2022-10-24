@@ -3,7 +3,7 @@ const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server, {
   cors: {
-    origins: ["https://cliente.ifsc.cloud"],
+    origins: ["https://boidacarapreta.github.io"],
   },
 });
 const PORT = process.env.PORT || 3000;
@@ -58,5 +58,4 @@ io.on("connection", (socket) => {
 });
 
 // Abrir porta para HTTPS/WSS
-// app.use(express.static("./"));
 server.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
