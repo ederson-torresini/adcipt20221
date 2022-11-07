@@ -30,12 +30,7 @@ var mensagem;
 var ice_servers = {
   iceServers: [
     {
-      urls: "stun:ifsc.cloud",
-    },
-    {
-      urls: "turns:ifsc.cloud",
-      username: "etorresini",
-      credential: "matrix",
+      urls: "stun:stun.l.google.com:19302",
     },
   ],
 };
